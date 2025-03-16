@@ -98,11 +98,12 @@ final class Client implements LiveSdkContract
             'base_uri' => $this->config['api_url'],
             'timeout' => 10,
             'http_errors' => false,
-            'option' => ['http_errors' => false],
+            // 'option' => ['http_errors' => false], // Deprecated in guzzle 7
             'headers' => [
                 'Authorization' => $this->config['api_key'],
                 'Accept-Language' => $this->config['lang'],
                 'Accept' => 'application/json',
+                'Content-Type' => 'application/json', // Add content type for all requests
             ]
         ], $guzzleConfiguration));
     }
