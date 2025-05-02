@@ -76,8 +76,8 @@ final class Client implements LiveSdkContract
     private function preparingConfig()
     {
         $this->config['api_key'] = 'Apikey ' . str_replace('Apikey ', '', $this->config['api_key']);
-        $this->config['lang'] = $this->config['lang'] ?? 'en';
-        $this->config['api_url'] = $this->config['api_url'] ?? 'https://napi.arvancloud.com/live/2.0/';
+        $this->config['lang'] = $this->config['lang'] ?? 'fa';
+        $this->config['api_url'] = $this->config['api_url'] ?? 'https://napi.arvancloud.ir/live/2.0/';
     }
 
     /**
