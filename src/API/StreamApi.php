@@ -51,10 +51,12 @@ class StreamApi extends API
      * @return Response
      * @throws ApiFailedException
      */
-    public function get(string $id) : Response
+    public function get(string $id, array $options) : Response
     {
         $response = $this->client
-            ->request('get', "streams/{$id}");
+            ->request('get', "streams/{$id}", [
+                'query'=> $options
+            ]);
         return Response::create($response);
     }
 
